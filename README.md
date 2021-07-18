@@ -1,4 +1,8 @@
 # Harmonised System API's
+
+## Usecase
+https://www.cogoport.com/blogs/hs-code-all-about-classification-of-goods-in-export-import
+
 ## SETUP: 
 ### Requirements:
 

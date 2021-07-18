@@ -1,24 +1,33 @@
-# README
+# Harmonised System API's
+## SETUP: 
+### Requirements:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Ruby Version 2.5.0 required
+* https://www.postgresql.org/download/ PostgreSql
 
-Things you may want to cover:
+Go in terminal to the location where project installed
+Run Commands 
+* bundle install
+* rake db:create
+* rake db:migrate
+* rake lib:tasks:one_timer:add_product_data (it has to srcipt to add dataset in database)
+* rails s
 
-* Ruby version
+On running these command we are ready to run the api’s 
 
-* System dependencies
+### API'S
 
-* Configuration
+PUT: http://127.0.0.1:3000/api/products
 
-* Database creation
+#### INPUT: 
+```json
+{
+   {
+       "code": "0101210000",
+       "description": "Live horses, asses, mules and hinnies:Horses:*Pure-bred breeding animals<951>"
+   }
+}
+``` 
+SHOW: http://127.0.0.1:3000/api/get_product_description/1
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+GET: http://127.0.0.1:3000/api/products

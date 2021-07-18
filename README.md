@@ -3,7 +3,6 @@
 ### Requirements:
 
 * Ruby Version 2.5.0 required
-* https://www.postgresql.org/download/ PostgreSql
 
 Go in terminal to the location where project installed
 Run Commands 

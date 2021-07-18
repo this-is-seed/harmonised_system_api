@@ -1,24 +1,36 @@
-# README
+# Harmonised System API's
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Usecase
+https://www.cogoport.com/blogs/hs-code-all-about-classification-of-goods-in-export-import
 
-Things you may want to cover:
+## SETUP: 
+### Requirements:
 
-* Ruby version
+* Ruby Version 2.5.0 required
 
-* System dependencies
+Go in terminal to the location where project installed
+Run Commands 
+* bundle install
+* rake db:create
+* rake db:migrate
+* rake lib:tasks:one_timer:add_product_data (it has to srcipt to add dataset in database)
+* rails s
 
-* Configuration
+On running these command we are ready to run the api’s 
 
-* Database creation
+### API'S
 
-* Database initialization
+PUT: http://127.0.0.1:3000/api/products
 
-* How to run the test suite
+#### INPUT: 
+```json
+{
+   {
+       "code": "0101210000",
+       "description": "Live horses, asses, mules and hinnies:Horses:*Pure-bred breeding animals<951>"
+   }
+}
+``` 
+SHOW: http://127.0.0.1:3000/api/get_product_description/1
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+GET: http://127.0.0.1:3000/api/products
